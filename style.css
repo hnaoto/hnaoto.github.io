@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -51,10 +51,38 @@ body {
 	color: #5A4D4D;
 	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;
 	font-size: 1.2em;
+	overflow:hidden;
+}
+
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+
+h4 {
 	
-	
+	font-size: 1.2em;	
+	font-weight: 600;
+	text-transform:uppercase;	
+    height: 34px;  
+    width: 12%;  
+    position: absolute;  
+    line-height: 34px;  
 	
 }
+
+.bold {
+		font-weight: 600;
+}
+
+
+a:hover {
+	opacity: 0.7;
+	
+}
+
+
 
 #main {
 	width: 95%;
@@ -90,6 +118,8 @@ nav ul {
 
 #mainNav {
 	margin: auto;
+	position:fixed;
+	z-index:1000;
 }
 
 #mainNav li {
@@ -111,14 +141,10 @@ nav ul {
 
 
 
-a {
-	text-decoration: none;
-	color:inherit;
-}
 
 
 
-#content {
+.content {
 	float: left;
     width: 80%;
     margin-right: 2em;
@@ -138,3 +164,375 @@ footer {
 	
 	
 }
+
+
+
+.st-scroll{  
+    width: 80%;  
+    height: 100%;  
+    position:relative;  
+    left: calc(5% + 6em);
+	  
+    top:0px;  
+    /*mobile speed up?*/  
+    -webkit-transform: translate3D(0,0,0);  
+    -ms-transform: translate3D(0,0,0);  
+    -o-transform: translate3D(0,0,0);  
+    transform: translate3D(0,0,0);  
+    -webkit-backface-visibility: hidden;  
+    -moz-backface-visibility: hidden;  
+    -ms-backface-visibility: hidden;  
+    backface-visibility: hidden;  
+  
+    /*animation*/  
+    -webkit-transition: all 0.6s ease-in-out;  
+    -o-transition: all 0.6s ease-in-out;  
+    transition: all 0.6s ease-in-out;  
+}  
+.st-scroll section{  
+    position: relative;  
+    width: 100%;  
+    height:100%;  
+    overflow: hidden;  
+}  
+
+/**
+.st-scroll section:nth-child(odd){  
+    background-color: #fa96b5;  
+}  
+**/
+
+
+#st-container-1:focus ~ .st-scroll{
+	 
+    -webkit-transform: translateY(0%);  
+    -ms-transform: translateY(0%);  
+    -o-transform: translateY(0%);  
+    transform: translateY(0%);  
+}  
+#st-container-2:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-100%);  
+    -ms-transform: translateY(-100%);  
+    -o-transform: translateY(-100%);  
+    transform: translateY(-100%);  
+}  
+#st-container-3:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-200%);  
+    -ms-transform: translateY(-200%);  
+    -o-transform: translateY(-200%);  
+    transform: translateY(-200%);  
+}  
+#st-container-4:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-300%);  
+    -ms-transform: translateY(-300%);  
+    -o-transform: translateY(-300%);  
+    transform: translateY(-300%);  
+}  
+#st-container-5:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-400%);  
+    -ms-transform: translateY(-400%);  
+    -o-transform: translateY(-400%);  
+    transform: translateY(-400%);  
+}  
+
+
+
+#st-container-6:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-500%);  
+    -ms-transform: translateY(-500%);  
+    -o-transform: translateY(-500%);  
+    transform: translateY(-500%);  
+}  
+
+
+#st-container-7:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-600%);  
+    -ms-transform: translateY(-600%);  
+    -o-transform: translateY(-600%);  
+    transform: translateY(-600%);  
+}  
+
+#st-container-8:focus ~ .st-scroll{  
+    -webkit-transform: translateY(-700%);  
+    -ms-transform: translateY(-700%);  
+    -o-transform: translateY(-700%);  
+    transform: translateY(-700%);  
+}  
+
+
+.st-container{  
+    width: 100%;  
+    height: 100%;  
+    position: absolute;  
+    left: 5%;  
+    top: 0;  
+}  
+
+
+.st-container input:hover {
+	opacity: 0.7;
+	
+}
+
+
+
+
+
+.st-container>input{  
+    height: 34px;  
+    width: 12%;  
+    position: absolute;  
+    bottom: 0px;  
+    line-height: 34px;  
+    background: none;
+    border: none;
+    font-size: 1.2em;	
+	color: #5A4D4D;
+	text-transform:uppercase;
+	text-align: left;
+	outline:none;
+	
+}  
+.st-container input{  
+    z-index:1000;  
+    
+    cursor: pointer;  
+}  
+
+
+
+
+#st-container-1,#st-container-1 + a{    
+	top: 9%;
+	position:fixed;
+}  
+
+
+#st-container-sec-1{   
+	top: calc(9% + 1.3em);
+}  
+
+
+#st-container-2,#st-container-2 + a{  
+    left:1.3em;  
+	top: calc(9% + 1.3 * 2em)
+}  
+#st-container-3,#st-container-3 + a{  
+    left:1.3em;  
+	top: calc(9% + 1.3 * 3em)
+}  
+#st-container-4,#st-container-4 + a{  
+    left:1.3em;  
+	top: calc(9% + 1.3 * 4em)
+}  
+#st-container-5,#st-container-5 + a{  
+    left: 1.3em;  
+	top: calc(9% + 1.3 * 5em);
+}  
+  
+
+#st-container-6,#st-container-6 + a{  
+	top: calc(9% + 1.3 * 6em);
+	font-weight: 500;
+}  
+
+#st-container-7,#st-container-7 + a{   
+	top: calc(9% + 1.3 * 7em);
+}  
+
+
+#st-container-8,#st-container-8 + a{    
+	top: calc(9% + 1.3 * 8em);
+	font-weight: 500;
+}  
+  
+
+  
+  
+  
+
+  
+
+
+
+
+.st-container li input:focus+a,.st-container li input:focus:hover+a{  
+    background-color: #821134;  
+} 
+
+ 
+.st-container li input:focus+a:after{  
+    content: "";  
+    height: 0px;  
+    width: 0px;  
+    overflow: hidden;  
+    border: 20px solid transparent;  
+    border-bottom-color: #821134;  
+    position: absolute;  
+    bottom: 100%;  
+    left:50%;  
+    margin-left:-20px;  
+}  
+
+
+#st-pannel-1 {
+	display: flex;
+	width: 90%;
+	height: 90%;
+	padding-bottom: 10%;
+}
+
+#st-pannel-1 img {
+	margin: auto;
+	
+}
+
+
+
+#st-container-1:focus ~ .st-scroll #st-pannel-1 h2,  
+#st-container-2:focus ~ .st-scroll #st-pannel-2 h2,  
+#st-container-3:focus ~ .st-scroll #st-pannel-3 h2,  
+#st-container-4:focus ~ .st-scroll #st-pannel-4 h2,  
+#st-container-5:focus ~ .st-scroll #st-pannel-5 h2,
+#st-container-6:focus ~ .st-scroll #st-pannel-6 h2,
+#st-container-7:focus ~ .st-scroll #st-pannel-7 h2,
+#st-container-8:focus ~ .st-scroll #st-pannel-8 h2{  
+    -webkit-animation: moveUp 0.6s ease-in 0.2s backwards;  
+    -moz-animation: moveUp 0.6s ease-in 0.2s backwards;  
+    -ms-animation: moveUp 0.6s ease-in 0.2s backwards;  
+    -o-animation: moveUp 0.6s ease-in 0.2s backwards;  
+    animation: moveUp 0.6s ease-in 0.2s backwards;  
+}  
+#st-container-1:focus ~ .st-scroll #st-pannel-1 p,  
+#st-container-2:focus ~ .st-scroll #st-pannel-2 p,  
+#st-container-3:focus ~ .st-scroll #st-pannel-3 p,  
+#st-container-4:focus ~ .st-scroll #st-pannel-4 p,  
+#st-container-5:focus ~ .st-scroll #st-pannel-5 p,
+#st-container-6:focus ~ .st-scroll #st-pannel-6 p,
+#st-container-7:focus ~ .st-scroll #st-pannel-7 p,
+#st-container-8:focus ~ .st-scroll #st-pannel-8 p{  
+    -webkit-animation: moveDown 0.6s ease-in 0.2s backwards;  
+    -moz-animation: moveDown 0.6s ease-in 0.2s backwards;  
+    -ms-animation: moveDown 0.6s ease-in 0.2s backwards;  
+    -o-animation: moveDown 0.6s ease-in 0.2s backwards;  
+    animation: moveDown 0.6s ease-in 0.2s backwards;  
+}  
+
+
+
+/*moveUp*/  
+@keyframes moveUp  
+{  
+    from {  
+        transform:translateY(-40px);  
+        opacity: 0;  
+        }  
+    to {  
+        transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+  
+@-moz-keyframes moveUp /* Firefox */  
+{  
+    from {  
+        -moz-transform:translateY(-40px);  
+        opacity: 0;  
+        }  
+    to {  
+        -moz-transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+  
+@-webkit-keyframes moveUp /* Safari 和 Chrome */  
+{  
+from {  
+    -webkit-transform:translateY(-40px);  
+    opacity: 0;  
+    }  
+to {  
+    -webkit-transform:translateY(0px);  
+    opacity: 1;  
+    }  
+}  
+  
+@-o-keyframes moveUp /* Opera */  
+{  
+    from {  
+        -o-transform:translateY(-40px);  
+        opacity: 0;  
+        }  
+    to {  
+        -o-transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+@keyframes moveDown  
+{  
+    from {  
+        transform:translateY(40px);  
+        opacity: 0;  
+        }  
+    to {  
+        transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+  
+@-moz-keyframes moveDown /* Firefox */  
+{  
+    from {  
+        -moz-transform:translateY(40px);  
+        opacity: 0;  
+        }  
+    to {  
+        -moz-transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+  
+@-webkit-keyframes moveDown /* Safari and Chrome */  
+{  
+from {  
+    -webkit-transform:translateY(40px);  
+    opacity: 0;  
+    }  
+to {  
+    -webkit-transform:translateY(0px);  
+    opacity: 1;  
+    }  
+}  
+  
+@-o-keyframes moveDown /* Opera */  
+{  
+    from {  
+        -o-transform:translateY(40px);  
+        opacity: 0;  
+        }  
+    to {  
+        -o-transform:translateY(0px);  
+        opacity: 1;  
+        }  
+}  
+  
+@media screen and (max-width: 520px){  
+    .st-container > a{  
+        font-size: 12px;  
+    }  
+    .st-scroll h2{  
+        font-size: 30px;  
+        margin-top:-100px;  
+    }  
+    .st-scroll p{  
+        width: 90%;  
+        left:5%;  
+        margin-top: 0px;  
+  
+    }  
+    .st-scroll .st-desc{  
+        height: 100px;  
+        width: 100px;  
+        margin-left: -50px;  
+    }  
+}  
