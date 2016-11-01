@@ -199,32 +199,32 @@ footer {
 **/
 
 
-#st-container-1:focus ~ .st-scroll{
+#st-container-1:checked ~ .st-scroll{
 	 
     -webkit-transform: translateY(0%);  
     -ms-transform: translateY(0%);  
     -o-transform: translateY(0%);  
     transform: translateY(0%);  
 }  
-#st-container-2:focus ~ .st-scroll{  
+#st-container-2:checked ~ .st-scroll{  
     -webkit-transform: translateY(-100%);  
     -ms-transform: translateY(-100%);  
     -o-transform: translateY(-100%);  
     transform: translateY(-100%);  
 }  
-#st-container-3:focus ~ .st-scroll{  
+#st-container-3:checked ~ .st-scroll{  
     -webkit-transform: translateY(-200%);  
     -ms-transform: translateY(-200%);  
     -o-transform: translateY(-200%);  
     transform: translateY(-200%);  
 }  
-#st-container-4:focus ~ .st-scroll{  
+#st-container-4:checked ~ .st-scroll{  
     -webkit-transform: translateY(-300%);  
     -ms-transform: translateY(-300%);  
     -o-transform: translateY(-300%);  
     transform: translateY(-300%);  
 }  
-#st-container-5:focus ~ .st-scroll{  
+#st-container-5:checked ~ .st-scroll{  
     -webkit-transform: translateY(-400%);  
     -ms-transform: translateY(-400%);  
     -o-transform: translateY(-400%);  
@@ -232,8 +232,7 @@ footer {
 }  
 
 
-
-#st-container-6:focus ~ .st-scroll{  
+#st-container-6:checked ~ .st-scroll{  
     -webkit-transform: translateY(-500%);  
     -ms-transform: translateY(-500%);  
     -o-transform: translateY(-500%);  
@@ -241,14 +240,14 @@ footer {
 }  
 
 
-#st-container-7:focus ~ .st-scroll{  
+#st-container-7:checked ~ .st-scroll{  
     -webkit-transform: translateY(-600%);  
     -ms-transform: translateY(-600%);  
     -o-transform: translateY(-600%);  
     transform: translateY(-600%);  
 }  
 
-#st-container-8:focus ~ .st-scroll{  
+#st-container-8:checked ~ .st-scroll{  
     -webkit-transform: translateY(-700%);  
     -ms-transform: translateY(-700%);  
     -o-transform: translateY(-700%);  
@@ -265,16 +264,24 @@ footer {
 }  
 
 
-.st-container input:hover {
-	opacity: 0.7;
-	
+
+
+
+
+
+.st-container>a{
+	z-index:100;
+	font-size: #eee;
+	background-color: #e23a6e;
+	font-size: 16px;
+	color:#fff;
+	text-align: center;
+	text-decoration:none;
 }
 
 
 
-
-
-.st-container>input{  
+.st-container>input, .st-container>a{  
     height: 34px;  
     width: 12%;  
     position: absolute;  
@@ -291,9 +298,13 @@ footer {
 }  
 .st-container input{  
     z-index:1000;  
-    
-    cursor: pointer;  
+    cursor: pointer;
+	opacity: 0;  
 }  
+
+
+
+
 
 
 
@@ -347,29 +358,7 @@ footer {
   
   
 
-  
-
-
-
-
-.st-container li input:focus+a,.st-container li input:focus:hover+a{  
-    background-color: #821134;  
-} 
-
  
-.st-container li input:focus+a:after{  
-    content: "";  
-    height: 0px;  
-    width: 0px;  
-    overflow: hidden;  
-    border: 20px solid transparent;  
-    border-bottom-color: #821134;  
-    position: absolute;  
-    bottom: 100%;  
-    left:50%;  
-    margin-left:-20px;  
-}  
-
 
 #st-pannel-1 {
 	display: flex;
@@ -378,6 +367,18 @@ footer {
 	padding-bottom: 10%;
 }
 
+
+
+
+#st-pannel-8 {
+	display: flex;
+	width: 80%;
+	height: 100%;
+	padding-bottom: 10%;
+}
+
+
+
 #st-pannel-1 img {
 	margin: auto;
 	
@@ -385,28 +386,28 @@ footer {
 
 
 
-#st-container-1:focus ~ .st-scroll #st-pannel-1 h2,  
-#st-container-2:focus ~ .st-scroll #st-pannel-2 h2,  
-#st-container-3:focus ~ .st-scroll #st-pannel-3 h2,  
-#st-container-4:focus ~ .st-scroll #st-pannel-4 h2,  
-#st-container-5:focus ~ .st-scroll #st-pannel-5 h2,
-#st-container-6:focus ~ .st-scroll #st-pannel-6 h2,
-#st-container-7:focus ~ .st-scroll #st-pannel-7 h2,
-#st-container-8:focus ~ .st-scroll #st-pannel-8 h2{  
+#st-container-1:checked ~ .st-scroll #st-pannel-1 h2,  
+#st-container-2:checked ~ .st-scroll #st-pannel-2 h2,  
+#st-container-3:checked ~ .st-scroll #st-pannel-3 h2,  
+#st-container-4:checked ~ .st-scroll #st-pannel-4 h2,  
+#st-container-5:checked ~ .st-scroll #st-pannel-5 h2,
+#st-container-6:checked ~ .st-scroll #st-pannel-6 h2,
+#st-container-7:checked ~ .st-scroll #st-pannel-7 h2,
+#st-container-8:checked ~ .st-scroll #st-pannel-8 h2{  
     -webkit-animation: moveUp 0.6s ease-in 0.2s backwards;  
     -moz-animation: moveUp 0.6s ease-in 0.2s backwards;  
     -ms-animation: moveUp 0.6s ease-in 0.2s backwards;  
     -o-animation: moveUp 0.6s ease-in 0.2s backwards;  
     animation: moveUp 0.6s ease-in 0.2s backwards;  
 }  
-#st-container-1:focus ~ .st-scroll #st-pannel-1 p,  
-#st-container-2:focus ~ .st-scroll #st-pannel-2 p,  
-#st-container-3:focus ~ .st-scroll #st-pannel-3 p,  
-#st-container-4:focus ~ .st-scroll #st-pannel-4 p,  
-#st-container-5:focus ~ .st-scroll #st-pannel-5 p,
-#st-container-6:focus ~ .st-scroll #st-pannel-6 p,
-#st-container-7:focus ~ .st-scroll #st-pannel-7 p,
-#st-container-8:focus ~ .st-scroll #st-pannel-8 p{  
+#st-container-1:checked ~ .st-scroll #st-pannel-1 p,  
+#st-container-2:checked ~ .st-scroll #st-pannel-2 p,  
+#st-container-3:checked ~ .st-scroll #st-pannel-3 p,  
+#st-container-4:checked ~ .st-scroll #st-pannel-4 p,  
+#st-container-5:checked ~ .st-scroll #st-pannel-5 p,
+#st-container-6:checked ~ .st-scroll #st-pannel-6 p,
+#st-container-7:checked ~ .st-scroll #st-pannel-7 p,
+#st-container-8:checked ~ .st-scroll #st-pannel-8 p{  
     -webkit-animation: moveDown 0.6s ease-in 0.2s backwards;  
     -moz-animation: moveDown 0.6s ease-in 0.2s backwards;  
     -ms-animation: moveDown 0.6s ease-in 0.2s backwards;  
@@ -414,6 +415,41 @@ footer {
     animation: moveDown 0.6s ease-in 0.2s backwards;  
 }  
 
+
+
+#intro {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+}
+
+
+#intro p {
+	font-size: 0.9em;
+	
+}
+
+
+#intro div:nth-child(2) {
+	margin-top: 2em;
+	
+}
+
+
+#intro span {
+	margin-right: 2em;	
+	
+}
+
+.col {
+	-moz-column-width: 12em;
+	-moz-columns: 12em;
+	-webkit-columns: 12em;
+	columns: 12em;
+}
+	
 
 
 /*moveUp*/  
@@ -532,3 +568,5 @@ to {
         margin-left: -50px;  
     }  
 }  
+
+

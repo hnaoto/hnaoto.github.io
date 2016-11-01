@@ -1,9 +1,15 @@
 <html>
 
-
+  <head>
   <link href="style.css" rel="stylesheet">
   <title> ichigo ichie </title>
+  <script type="text/javascript" src="config.json"> </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
   
+  
+  
+  </head>
   
   <body>
       
@@ -15,10 +21,18 @@
              
            
             
-             
-             
+			<input type="radio" id="st-container-1" name="st-container" checked="checked"><a href="#st-pannel-1">root</a></input>
+            <h4 id="st-container-sec-1"> work</h4>
+			<input type="radio" id="st-container-2" name="st-container"><a href="#st-pannel-2">full stack</a></input>
+			<input type="radio" id="st-container-3" name="st-container"><a href="#st-pannel-3">React Native</a></input>
+			<input type="radio" id="st-container-4" name="st-container"><a href="#st-pannel-4">etc</a></input>
+			<input type="radio" id="st-container-5" name="st-container"><a href="#st-pannel-5">Design</a></input>
+ 			<input type="radio" id="st-container-6" name="st-container"><a href="#st-pannel-6">game</a></input>
+			<input type="radio" id="st-container-7" name="st-container"><a href="#st-pannel-7">reads</a></input>           
+  			<input type="radio" id="st-container-8" name="st-container"><a href="#st-pannel-8">bio</a></input>              
+            <!--
             
-            <input type="button" id="st-container-1" name="st-container" value="root"></input>
+            <input type="button" id="st-container-1" name="st-container" value="root"><a href="#st-pannel-1">item1</a></input>
             <h4 id="st-container-sec-1"> work</h4>
             <input type="button" id="st-container-2" name="st-container" value="full stack"> </input> 
             <input type="button" id="st-container-3" name="st-container" value="React Native"></input>         
@@ -26,10 +40,10 @@
             <input type="button" id="st-container-5" name="st-container" value="design"></input>   
             <input type="button" id="st-container-6" name="st-container" value="game"></input>  
             <input type="button" id="st-container-7" name="st-container" value="reads"></input>        
-            <input type="button" id="st-container-8" name="st-container" value="bio"></input> 
-   
+            <input type="button" id="st-container-8" name="st-container" value="bio"><a href="#st-pannel-8">item5 </a></input> 
+   			
           
-
+				-->
   
             <div class="st-scroll">  
                 <section id="st-pannel-1">  
@@ -40,11 +54,15 @@
        						 <img src="images/main-3.jpg" height="80%"> 
 
                 </section>  
+                
+                
                 <section id="st-pannel-2">  
                     <div class="st-desc"></div>  
                     <h2>Section 2</h2>  
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias inventore possimus laudantium repellat ipsam iusto ipsum ullam vel sapiente architecto temporibus distinctio praesentium in, nobis corrupti esse eligendi quos. Inventore.</p>  
                 </section>  
+                
+                
                 <section id="st-pannel-3">  
                     <div class="st-desc"></div>  
                     <h2>Section 3</h2>  
@@ -64,16 +82,51 @@
                     <div class="st-desc"></div>  
                     <h2>Section 5</h2>  
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore perferendis ex, molestiae quasi impedit quidem aut beatae debitis optio doloremque ea vel voluptate distinctio quis, blanditiis saepe, autem nobis voluptatem.</p>  
+                    
+                   
                 </section>                  
                 <section id="st-pannel-7">  
                     <div class="st-desc"></div>  
-                    <h2>Section 5</h2>  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore perferendis ex, molestiae quasi impedit quidem aut beatae debitis optio doloremque ea vel voluptate distinctio quis, blanditiis saepe, autem nobis voluptatem.</p>  
+                    
+                    
+                    <div id ="reading_now">
+                    
+                   	
+                    	
+                    </div> 
                 </section>  
                 <section id="st-pannel-8">  
                     <div class="st-desc"></div>  
                     <h2>Section 5</h2>  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore perferendis ex, molestiae quasi impedit quidem aut beatae debitis optio doloremque ea vel voluptate distinctio quis, blanditiis saepe, autem nobis voluptatem.</p>  
+                    
+                    
+                    <div id ="intro">
+                    
+                    
+                    
+                    <div>
+                    
+                    <p>My life is really linear as a CS student. I spend half of time on school work and the other half on personal projects and learning. I have rusehd the entry-level dungones of NodeJS, CSS, React Native and ASP.NET MVC. </p>
+                    <p> My top 3 video games are Silent Hill, War III  and Final Fantasy.   I believe in positive energy, creativie visualization and automation. </p>
+                   </div>
+                    
+                    
+                    
+                    
+                    <!--
+                    <div>
+					 
+                    <h5>Favorites </h5>
+         			<p><span>Game</span>     </p>
+                    <p><span>Desinger</span> Alexander Mcqueen</p>  
+                    <p>Music:  </p>
+                    </div>
+                    -->
+                    
+                    
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+                    
+                    
                 </section>                                  
                 
                 
@@ -118,7 +171,7 @@
     <section>
     
     
-    
+   <script type="text/javascript" src="js/main.js"></script>
   </body>
   
 
