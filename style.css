@@ -189,7 +189,8 @@ footer {
     position: relative;  
     width: 100%;  
     height:100%;  
-    overflow: hidden;  
+	overflow-x: hidden;
+    overflow: auto;
 }  
 
 /**
@@ -450,6 +451,24 @@ footer {
 	columns: 12em;
 }
 	
+
+#st-pannel-7 img {
+	margin: 1em;
+	
+	
+}
+
+
+#st-pannel-7 h2 {
+	text-transform:uppercase;
+	color: #819697;
+	border-bottom: 1px #819697 solid;
+	margin-left: 1em; 
+	width: 90%;
+	
+	
+}
+
 
 
 /*moveUp*/  

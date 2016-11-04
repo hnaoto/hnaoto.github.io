@@ -2,10 +2,17 @@
 (function() {
 
 	var config = JSON.parse(data);
-	var booksUrl = config["BOOK_API_GET_BOOKS"];
+	var readingUrl = config["BOOK_API_READING"];
+	var haveReadUrl = config["BOOK_API_HAVE_READ"];
+	var toReadUrl = config["BOOK_API_TO_READ"];
+			
 	
-	_renderBooks(booksUrl);
 	
+	
+	
+	_renderBooks(readingUrl, "#reading_now");
+	_renderBooks(haveReadUrl, "#have_read");
+	_renderBooks(toReadUrl, "#to_read");		
 
 	
 
@@ -13,7 +20,7 @@
 })();
 
 
-function _renderBooks(url) {
+function _renderBooks(url, div) {
 	
 	$.ajax({
 		type: "GET",
@@ -24,16 +31,16 @@ function _renderBooks(url) {
 		 	var books = data['items'];
 		 	console.log(books.length);
 		 	for (var i = 0; i < books.length; i++) {
-		 		var book = '<h5>' +  books[i].volumeInfo.title  + '</h5> <img src='  +   books[i].volumeInfo.imageLinks.thumbnail  + '>' ;
-		 		$("#reading_now").append(book);
+				
+				//<h5>' +  books[i].volumeInfo.title  + '</h5>
+		 		var book = ' <img src='  +   books[i].volumeInfo.imageLinks.thumbnail  + '>' ;
+		 		$(div).append(book);
 			}
 		  },
 		  error: function(XMLHttpRequest, textStatus, errorThrown){
 			console.log("error", textStatus + " (" + errorThrown + ")");
 		  }
 		});
-	
-	
-	
-	
+		
+
 }
