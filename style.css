@@ -52,6 +52,7 @@ body {
 	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;
 	font-size: 1.2em;
 	overflow:hidden;
+	transition: all 1.0s ease;
 }
 
 
@@ -465,6 +466,16 @@ footer {
 	border-bottom: 1px #819697 solid;
 	margin-left: 1em; 
 	width: 90%;
+	
+	
+}
+
+
+
+
+#st-pannel-2 {
+	
+
 	
 	
 }
